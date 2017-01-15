@@ -7,7 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 #import "CVLBarrageDescriptor.h"
-#import "CVLUtility.h"
+#import "NSDictionary+Safety.h"
+#import "UIColor+Utility.h"
 
 @interface CVLBarrageDescriptor ()
 @property(nonatomic, strong, readwrite) NSDictionary *attributeDict;

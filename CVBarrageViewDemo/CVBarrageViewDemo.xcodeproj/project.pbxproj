@@ -17,7 +17,9 @@
 		7E1E90C51E2764760044D326 /* CVLBarrageDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1E90BF1E2764760044D326 /* CVLBarrageDescriptor.m */; };
 		7E1E90C61E2764760044D326 /* CVLBarrageRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1E90C11E2764760044D326 /* CVLBarrageRenderView.m */; };
 		7E1E90C71E2764760044D326 /* CVLBarrageSpirit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1E90C31E2764760044D326 /* CVLBarrageSpirit.m */; };
+		7E5B889A1E2B688500506203 /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B88991E2B688500506203 /* UIColor+Utility.m */; };
 		7EF7EB401E2766D10027748A /* CVLCountdownTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7EB3F1E2766D10027748A /* CVLCountdownTrigger.m */; };
+		7EF7EB431E276C8A0027748A /* NSDictionary+Safety.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7EB421E276C8A0027748A /* NSDictionary+Safety.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +41,13 @@
 		7E1E90C11E2764760044D326 /* CVLBarrageRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVLBarrageRenderView.m; sourceTree = "<group>"; };
 		7E1E90C21E2764760044D326 /* CVLBarrageSpirit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVLBarrageSpirit.h; sourceTree = "<group>"; };
 		7E1E90C31E2764760044D326 /* CVLBarrageSpirit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVLBarrageSpirit.m; sourceTree = "<group>"; };
+		7E5B88981E2B688500506203 /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
+		7E5B88991E2B688500506203 /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
+		7E5B889B1E2B68E700506203 /* CVLGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVLGlobal.h; sourceTree = "<group>"; };
 		7EF7EB3E1E2766D10027748A /* CVLCountdownTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVLCountdownTrigger.h; sourceTree = "<group>"; };
 		7EF7EB3F1E2766D10027748A /* CVLCountdownTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVLCountdownTrigger.m; sourceTree = "<group>"; };
+		7EF7EB411E2769A10027748A /* NSDictionary+Safety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safety.h"; sourceTree = "<group>"; };
+		7EF7EB421E276C8A0027748A /* NSDictionary+Safety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safety.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +123,11 @@
 			children = (
 				7EF7EB3E1E2766D10027748A /* CVLCountdownTrigger.h */,
 				7EF7EB3F1E2766D10027748A /* CVLCountdownTrigger.m */,
+				7EF7EB411E2769A10027748A /* NSDictionary+Safety.h */,
+				7EF7EB421E276C8A0027748A /* NSDictionary+Safety.m */,
+				7E5B88981E2B688500506203 /* UIColor+Utility.h */,
+				7E5B88991E2B688500506203 /* UIColor+Utility.m */,
+				7E5B889B1E2B68E700506203 /* CVLGlobal.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -195,8 +207,10 @@
 				7E1E90C51E2764760044D326 /* CVLBarrageDescriptor.m in Sources */,
 				7EF7EB401E2766D10027748A /* CVLCountdownTrigger.m in Sources */,
 				7E1E90C41E2764760044D326 /* CVLBarrageCell.m in Sources */,
+				7E5B889A1E2B688500506203 /* UIColor+Utility.m in Sources */,
 				7E1E90AC1E27645A0044D326 /* ViewController.m in Sources */,
 				7E1E90A91E27645A0044D326 /* AppDelegate.m in Sources */,
+				7EF7EB431E276C8A0027748A /* NSDictionary+Safety.m in Sources */,
 				7E1E90A61E27645A0044D326 /* main.m in Sources */,
 				7E1E90C61E2764760044D326 /* CVLBarrageRenderView.m in Sources */,
 			);
