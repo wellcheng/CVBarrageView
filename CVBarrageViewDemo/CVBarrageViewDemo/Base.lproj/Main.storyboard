@@ -1,26 +1,89 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cqt-30-SlC">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBk-FH-tzd">
+                                <rect key="frame" x="305" y="28" width="56" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rX3-Dq-hRI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbq-dr-acM">
+                                <rect key="frame" x="594" y="28" width="53" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZs-Wk-cZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEG-AM-m3Z">
+                                <rect key="frame" x="35" y="28" width="45" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLu-Gb-tnk"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Nb-K6-aby">
+                                <rect key="frame" x="33" y="337" width="616" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vCF-d8-4Sy"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BBk-FH-tzd" firstAttribute="baseline" secondItem="nbq-dr-acM" secondAttribute="baseline" id="4sJ-rB-2fG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Nb-K6-aby" secondAttribute="bottom" constant="8" symbolic="YES" id="Bib-b7-5bT"/>
+                            <constraint firstItem="3Nb-K6-aby" firstAttribute="leading" secondItem="CEG-AM-m3Z" secondAttribute="leading" id="JCf-xg-Xg0"/>
+                            <constraint firstItem="BBk-FH-tzd" firstAttribute="centerX" secondItem="Cqt-30-SlC" secondAttribute="centerX" id="Nns-GW-HLZ"/>
+                            <constraint firstItem="CEG-AM-m3Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Nyx-uH-FGW"/>
+                            <constraint firstItem="3Nb-K6-aby" firstAttribute="trailing" secondItem="nbq-dr-acM" secondAttribute="trailing" id="Qhj-jV-obe"/>
+                            <constraint firstItem="Cqt-30-SlC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Xbs-f3-9De"/>
+                            <constraint firstItem="Cqt-30-SlC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bI4-kc-lBz"/>
+                            <constraint firstAttribute="trailing" secondItem="Cqt-30-SlC" secondAttribute="trailing" id="dIf-3u-dYH"/>
+                            <constraint firstItem="CEG-AM-m3Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="kiW-bd-fTw"/>
+                            <constraint firstItem="nbq-dr-acM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lCn-T3-nBi"/>
+                            <constraint firstItem="Cqt-30-SlC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lTt-AR-oRA"/>
+                            <constraint firstItem="CEG-AM-m3Z" firstAttribute="baseline" secondItem="BBk-FH-tzd" secondAttribute="baseline" id="yBW-za-F2L"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backImageView" destination="Cqt-30-SlC" id="eRz-K3-pPb"/>
+                        <outlet property="sliderBar" destination="3Nb-K6-aby" id="5XP-Jn-CCM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="312.59370314842579" y="109.59999999999999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="demo-1" width="1280" height="960"/>
+    </resources>
 </document>
