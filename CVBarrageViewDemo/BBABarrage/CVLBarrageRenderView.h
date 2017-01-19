@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, CVLPlayBarrageViewStatus) {
 
 /**
  当前视频的时长，当弹幕没有时间轴时，需要此值来将弹幕均匀分配
- @param barrageRenderView
+ @param barrageRenderView 弹幕view
  @return 时长
  */
 - (CGFloat)videoDuration:(CVLBarrageRenderView *)barrageRenderView;

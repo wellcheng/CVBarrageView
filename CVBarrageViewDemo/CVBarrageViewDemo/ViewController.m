@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CVLBarrageRenderView.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<CVLBarrageRenderDelegate>
+@property (nonatomic, strong) CVLBarrageRenderView *barrageView;
+@property (nonatomic, assign, getter=isPlaying) BOOL playing;
 @end
 
 @implementation ViewController
@@ -17,8 +19,9 @@
 #pragma mark - ViewController Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self configBarrageView];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -58,17 +61,63 @@
 - (void)clearBackImageAnimation {
     [self.backImageView stopAnimating];
 }
+
+- (void)configBarrageView {
+    self.barrageView = [[CVLBarrageRenderView alloc] init];
+    self.barrageView.delegate = self;
+}
+
+
 #pragma mark - Actions
 
 - (IBAction)start:(id)sender {
+    [self startBarrageRender];
 }
 
 - (IBAction)pause:(id)sender {
+    [self pauseBarrageRender];
 }
 
 - (IBAction)reset:(id)sender {
+    [self stopBarrageRender];
 }
 - (IBAction)sliderChanged:(UISlider *)sender {
+}
+
+#pragma mark - Barrage Action
+
+- (void)startBarrageRender {
+    
+}
+
+
+- (void)pauseBarrageRender {
+    
+}
+
+
+- (void)stopBarrageRender {
+    
+}
+
+#pragma mark - Barrage View Delegate
+
+- (CGFloat)videoCurrentPlayTime:(CVLBarrageRenderView *)barrageRenderView {
+    return self.sliderBar.value;
+}
+
+- (BOOL)videoIsPlaying:(CVLBarrageRenderView *)barrageRenderView {
+    return self.isPlaying;
+}
+
+
+- (CGFloat)videoDuration:(CVLBarrageRenderView *)barrageRenderView {
+    return self.sliderBar.maximumValue;
+}
+
+- (void)barrageViewPerpareDone:(CVLBarrageRenderView *)barrageRenderView {
+    // auto start when barrage data ok
+    [barrageRenderView start];
 }
 
 @end
